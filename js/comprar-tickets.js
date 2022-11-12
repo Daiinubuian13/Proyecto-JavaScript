@@ -1,6 +1,6 @@
 const TICKET = "200"
 const Estudiante = "0.8"
-const Trainee = "O.5"
+const Trainee = "0.5"
 const Junior = "0.15"
 
 const nombre = document.querySelector("#nombre");
