@@ -1,10 +1,10 @@
-const TICKET = 200;
-const ESTUDIANTE = 0.8;
-const TRAINEE = 0.5;
-const JUNIOR = 0.15;
+const TICKET = "200"
+const Estudiante = "0.8"
+const Trainee = "O.5"
+const Junior = "0.15"
 
 const nombre = document.querySelector("#nombre");
-const apellido = document.getElementById("apellido");
+const apellido = document.getElementById("#apellido");
 const email = document.querySelector("#email");
 const cantidad = document.querySelector("#cantidadTickets");
 const categoria = document.querySelector("#categoriaSelect");
@@ -12,8 +12,28 @@ const btnResumen = document.querySelector("#btnResumen");
 const btnClear = document.querySelector("#btnBorrar");
 let totalPago = document.querySelector("#totalPago");
 
-/*btnClear.addEventListener("click", limpiarRegistros); - se comenta porque se hace en html*/
-btnResumen.addEventListener("click", calcularMonto);
+/*btnClear.addEventListener("click", limpiarRegistros); - se comenta porque se hace en html
+
+form.addEventListener("click", btnResumen e=>)
+{
+    e.preventiDefault ()
+    let regexEmail = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/);
+
+    if(nombre.nodeValue.length <3){
+      warnings += "nombre muy corto" <br>
+    }
+
+    if(apellido.nodeValue.length <3){
+      warnings += "apellido muy corto" <br>
+    }
+
+    if(!regexEmail.test(email.value)){
+    warnings  += "el email no es válido" <br>
+    entrar = true
+}
+*/
+
+btnResumen.addEventListener("click", calcularMonto,);
 
 function limpiarRegistros() {
   nombre.value = "";
@@ -23,6 +43,7 @@ function limpiarRegistros() {
   categoria.value = "";
   totalPago.textContent = "";
 }
+
 /*
 let option = "esta seguro de borrar los campos";
 let mensaje = "";
@@ -36,12 +57,10 @@ if (option === true) {
   $("#cantidadTickets").val(bCantidad);
   $("#categoriaSelect").val(bCategoria);
 }
-alert (mensaje);
-*/
+alert (mensaje);*/
 
 function calcularMonto() {
   totalPago.textContent = TICKET - (TICKET * calcularDescuento()) * cantidad.value;
-    
 }
 
 function calcularDescuento() {
@@ -49,11 +68,11 @@ function calcularDescuento() {
     case "0":
       return 0;
     case "1":
-      return ESTUDIANTE;
+      return Estudiante;
     case "2":
-      return TRAINEE;
+      return Trainee;
     case "3":
-      return JUNIOR;
+      return Junior;
     default:
       break;
   }
