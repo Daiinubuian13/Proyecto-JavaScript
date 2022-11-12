@@ -60,7 +60,7 @@ if (option === true) {
 alert (mensaje);*/
 
 function calcularMonto() {
-  totalPago.textContent = TICKET - (TICKET * calcularDescuento()) * cantidad.value;
+  totalPago.textContent = (TICKET - (TICKET * calcularDescuento())) * cantidad.value;
 }
 
 function calcularDescuento() {
@@ -77,4 +77,3 @@ function calcularDescuento() {
       break;
   }
 }
-
